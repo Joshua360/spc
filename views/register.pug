@@ -1,0 +1,14 @@
+extends layout
+block content
+  h1 Register
+  form(method="post" action="/register")
+    label(for="name") Name
+    input#username(type="text" name="name")
+    label(for="email") Email
+    input#email(type="email" name="email")
+    label(for="password") Password
+    input#password(type="password" name="password")
+    button(type="submit") Register
+  br
+  .register-a
+    a(href="/") Login

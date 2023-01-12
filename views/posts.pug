@@ -1,0 +1,11 @@
+extends layout.pug
+block content
+    h1 All Posts
+    ul.blog-lists
+        each blog in blogs
+            li
+                a.post-title(href="/api/posts/" + blog.id) #{blog.title}
+                a.edit-post(href="/api/posts/" + blog.id + "/edit")
+                    i.far.fa-edit
+                a.delete-post(href="/api/posts/" + blog.id + "/delete")
+                    i.far.fa-trash-alt

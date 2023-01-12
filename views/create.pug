@@ -1,0 +1,10 @@
+extends layout.pug
+block content
+  //- create a form
+  form(method="post" action="/create")
+    label(for="title") Title
+    input#title(type="text" name="title")
+    label(for="body") Body
+    br
+    textarea#body(name="body")
+    button(type="submit") Post Blog

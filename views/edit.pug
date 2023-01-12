@@ -1,0 +1,9 @@
+extends layout.pug 
+block content
+    h1 Edit Post
+    form(action="/api/posts/" + blog.id + "?_method=PUT", method="POST")
+        label(for="title") Title
+        input(type="text", name="title", value=blog.title)
+        label(for="body") Body
+        textarea(name="body")= blog.body
+        input(type="submit", value="Update Post")
