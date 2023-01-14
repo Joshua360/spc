@@ -25,9 +25,9 @@ app.use('/static', express.static('public'));
 const mongoose = require('mongoose');
 //env variables
 require('dotenv').config();
-const mongoDB = process.env.DATABASE
-const dbUser = process.env.USERNAME
-const dbPassword = process.env.PASSWORD  
+const mongoDB = process.env.DATABASE;
+const dbUser = process.env.USERNAME;
+const dbPassword = process.env.PASSWORD;
 
 //connect to db using mongoose
 const uri = `mongodb+srv://Admin:${dbPassword}@cluster0.fsblo.mongodb.net/?retryWrites=true&w=majority`;
@@ -54,7 +54,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9002;
 
 app.get('/', (req, res) => {
   //check if user is logged in
