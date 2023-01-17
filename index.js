@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const User = require('./model/register');
 const Login = require('./model/login');
-const Blog = require('./model/blog');
+const Blog = require('./model/Blog');
 const session = require('express-session');
 
 app.use(session( {
@@ -25,7 +25,7 @@ app.use('/static', express.static('public'));
 const mongoose = require('mongoose');
 //env variables
 require('dotenv').config();
-const mongoDB = process.env.DATABASE;
+// const mongoDB = process.env.DATABASE;
 const dbUser = process.env.USERNAME;
 const dbPassword = process.env.PASSWORD;
 
